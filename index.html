@@ -24,104 +24,145 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
   </head>
-  <body>
-    <div class="content-wrapper">
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navigation</a>
-          <!-- Replace with your brand/logo -->
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+  <body data-bs-spy="scroll" data-bs-target=".nav-wrapper" data-bs-offset="100" tabindex="0" class="custom-theme">
+    <!-- Mobile Header -->
+    <header class="d-lg-none bg-dark fixed-top">
+      <div class="container-fluid">
+        <div class="d-flex justify-content-between align-items-center py-2">
+          <span class="text-white">Content Migration Guide</span>
+          <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar">
+            <i class="fas fa-bars"></i>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="#page-types">Page Types</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  id="navbarDropdownReplacementCodes"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false">
-                  Replacement Codes
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdownReplacementCodes">
-                  <li><a class="dropdown-item" href="#replacement-codes">All Replacement Codes</a></li>
-                  <li><a class="dropdown-item" href="#contact-block-codes">Contact Block Codes</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#best-practices">Best Practices</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#what-not-to-migrate">What Not to Migrate</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#faqs">FAQs & Special Situations</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#ga4-tagging">GA4 Tagging</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  id="navbarDropdownDevelopmentTools"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false">
-                  Development Tools
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdownDevelopmentTools">
-                  <li><a class="dropdown-item" href="#development-tools">All Development Tools</a></li>
-                  <li><a class="dropdown-item" href="#vscode-snippets">VS Code Snippets</a></li>
-                  <li><a class="dropdown-item" href="#emmet">Emmet</a></li>
-                  <li><a class="dropdown-item" href="#css-minification">CSS Minification</a></li>
-                  <li><a class="dropdown-item" href="#bookmark-scripts">Bookmark Scripts</a></li>
-                  <li><a class="dropdown-item" href="#accessibility-tools">Accessibility Tools</a></li>
-                </ul>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  id="navbarDropdownAccessibility"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false">
-                  Accessibility Guidelines
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdownAccessibility">
-                  <li><a class="dropdown-item" href="#accessibility">All Accessibility Guidelines</a></li>
-                  <li><a class="dropdown-item" href="#color-contrast">Color Contrast</a></li>
-                  <li><a class="dropdown-item" href="#alt-text">Alt Text & ARIA</a></li>
-                  <li><a class="dropdown-item" href="#layouts">Layouts & Code</a></li>
-                  <li><a class="dropdown-item" href="#video">Video</a></li>
-                  <li><a class="dropdown-item" href="#forms">Forms</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#image-sources-and-copyright">Image Sources and Copyright</a>
-              </li>
-            </ul>
+        </div>
+      </div>
+    </header>
+
+    <div class="d-flex">
+      <!-- Sidebar -->
+      <nav class="sidebar bg-dark d-none d-lg-block">
+        <div class="d-flex flex-column h-100 p-3">
+          <h5 class="text-white mb-4">Content Migration Guide</h5>
+          <div class="nav flex-column flex-nowrap nav-wrapper">
+            <a class="nav-link text-white" href="#page-types">Page Types</a>
+
+            <div>
+              <a class="nav-link text-white" href="#replacement-codes">Replacement Codes</a>
+              <div class="ms-3 mb-3">
+                <a class="nav-link text-white-50 small py-1" href="#replacement-codes">All Replacement Codes</a>
+                <a class="nav-link text-white-50 small py-1" href="#contact-block-codes">Contact Block Codes</a>
+              </div>
+            </div>
+
+            <a class="nav-link text-white" href="#best-practices">Best Practices</a>
+            <a class="nav-link text-white" href="#what-not-to-migrate">What Not to Migrate</a>
+            <a class="nav-link text-white" href="#faqs">FAQs & Special Situations</a>
+            <a class="nav-link text-white" href="#ga4-tagging">GA4 Tagging</a>
+
+            <div>
+              <a class="nav-link text-white" href="#development-tools">Development Tools</a>
+              <div class="ms-3 mb-3">
+                <a class="nav-link text-white-50 small py-1" href="#vscode-snippets">VS Code Snippets</a>
+                <a class="nav-link text-white-50 small py-1" href="#emmet">Emmet</a>
+                <a class="nav-link text-white-50 small py-1" href="#css-minification">CSS Minification</a>
+                <a class="nav-link text-white-50 small py-1" href="#bookmark-scripts">Bookmark Scripts</a>
+                <a class="nav-link text-white-50 small py-1" href="#accessibility-tools">Accessibility Tools</a>
+              </div>
+            </div>
+
+            <div>
+              <a class="nav-link text-white" href="#accessibility">Accessibility Guidelines</a>
+              <div class="ms-3 mb-3">
+                <a class="nav-link text-white-50 small py-1" href="#color-contrast">Color Contrast</a>
+                <a class="nav-link text-white-50 small py-1" href="#alt-text">Alt Text & ARIA</a>
+                <a class="nav-link text-white-50 small py-1" href="#layouts">Layouts & Code</a>
+                <a class="nav-link text-white-50 small py-1" href="#video">Video</a>
+                <a class="nav-link text-white-50 small py-1" href="#forms">Forms</a>
+              </div>
+            </div>
+
+            <a class="nav-link text-white" href="#image-sources-and-copyright">Image Sources and Copyright</a>
           </div>
         </div>
       </nav>
+      <!-- Offcanvas Sidebar for Mobile -->
+      <div class="offcanvas offcanvas-start bg-dark" tabindex="-1" id="sidebar">
+        <div class="offcanvas-header">
+          <h5 class="text-white">Content Migration Guide</h5>
+          <button
+            type="button"
+            class="btn-close btn-close-white"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div class="nav flex-column flex-nowrap nav-wrapper">
+            <a class="nav-link text-white" href="#page-types" data-bs-dismiss="offcanvas">Page Types</a>
+
+            <a class="nav-link text-white" href="#replacement-codes" data-bs-dismiss="offcanvas">Replacement Codes</a>
+            <div class="ms-3 mb-3">
+              <a class="nav-link text-white-50 small py-1" href="#replacement-codes" data-bs-dismiss="offcanvas"
+                >All Replacement Codes</a
+              >
+              <a class="nav-link text-white-50 small py-1" href="#contact-block-codes" data-bs-dismiss="offcanvas"
+                >Contact Block Codes</a
+              >
+            </div>
+
+            <a class="nav-link text-white" href="#best-practices" data-bs-dismiss="offcanvas">Best Practices</a>
+            <a class="nav-link text-white" href="#what-not-to-migrate" data-bs-dismiss="offcanvas"
+              >What Not to Migrate</a
+            >
+            <a class="nav-link text-white" href="#faqs" data-bs-dismiss="offcanvas">FAQs & Special Situations</a>
+            <a class="nav-link text-white" href="#ga4-tagging" data-bs-dismiss="offcanvas">GA4 Tagging</a>
+
+            <a class="nav-link text-white" href="#development-tools" data-bs-dismiss="offcanvas">Development Tools</a>
+            <div class="ms-3 mb-3">
+              <a class="nav-link text-white-50 small py-1" href="#vscode-snippets" data-bs-dismiss="offcanvas"
+                >VS Code Snippets</a
+              >
+              <a class="nav-link text-white-50 small py-1" href="#emmet" data-bs-dismiss="offcanvas">Emmet</a>
+              <a class="nav-link text-white-50 small py-1" href="#css-minification" data-bs-dismiss="offcanvas"
+                >CSS Minification</a
+              >
+              <a class="nav-link text-white-50 small py-1" href="#bookmark-scripts" data-bs-dismiss="offcanvas"
+                >Bookmark Scripts</a
+              >
+              <a class="nav-link text-white-50 small py-1" href="#accessibility-tools" data-bs-dismiss="offcanvas"
+                >Accessibility Tools</a
+              >
+            </div>
+
+            <div>
+              <a class="nav-link text-white" href="#accessibility" data-bs-dismiss="offcanvas"
+                >Accessibility Guidelines</a
+              >
+              <div class="ms-3 mb-3">
+                <a class="nav-link text-white-50 small py-1" href="#color-contrast" data-bs-dismiss="offcanvas"
+                  >Color Contrast</a
+                >
+                <a class="nav-link text-white-50 small py-1" href="#alt-text" data-bs-dismiss="offcanvas"
+                  >Alt Text & ARIA</a
+                >
+                <a class="nav-link text-white-50 small py-1" href="#layouts" data-bs-dismiss="offcanvas"
+                  >Layouts & Code</a
+                >
+                <a class="nav-link text-white-50 small py-1" href="#video" data-bs-dismiss="offcanvas">Video</a>
+                <a class="nav-link text-white-50 small py-1" href="#forms" data-bs-dismiss="offcanvas">Forms</a>
+              </div>
+            </div>
+
+            <a class="nav-link text-white" href="#image-sources-and-copyright" data-bs-dismiss="offcanvas"
+              >Image Sources and Copyright</a
+            >
+          </div>
+        </div>
+      </div>
+
       <!-- Main Content Area -->
-      <main class="container">
+      <main class="main-content">
         <!-- Overview Section -->
         <section>
-          <h1>Content Migration Training</h1>
+          <h1 class="custom-heading">Content Migration Training</h1>
           <p>
             This guide provides comprehensive instructions for migrating content to the DealerOn platform. It covers
             different page types, best practices, and tools to ensure successful content migrations while maintaining
@@ -130,18 +171,18 @@
         </section>
         <!-- Page Types Section -->
         <section id="page-types">
-          <h2>Page Types</h2>
+          <h2 class="custom-heading">Page Types</h2>
           <p>
             DealerOn sites are made up of a combination of page types, including: platform, inventory, OEM pages, and
             custom content.
           </p>
-          <h3>Platform Pages</h3>
+          <h3 class="custom-subheading">Platform Pages</h3>
           <p>
             Platform pages are controlled by our DEV team and provide core dealership functionality. While most of these
             pages have fixed layouts, Design can make specific edits like adding custom content above or below the
             platform content, and in some cases modify the content within designated editable regions.
           </p>
-          <h4>Inventory Pages</h4>
+          <h4 class="custom-subheading">Inventory Pages</h4>
           <p>
             Inventory pages are controlled by our DEV and Data teams. Design can make simple edits like tweaking CSS and
             adding content above and below the inventory feeds.
@@ -156,17 +197,17 @@
             <li><code>/specs-</code> - Virtual Vehicle Details (URL continues with vehicle-specific information)</li>
             <li><code>/showroom.aspx</code> - Vehicle Showroom</li>
           </ul>
-          <h5>Examples of Inventory Pages</h5>
+          <h5 class="custom-subheading">Examples of Inventory Pages</h5>
           <ul>
             <li>
               Search Results Page (SRP) - New:
-              <a href="https://cadillacdemo1.dealeron.com/searchnew.aspx" target="_blank"
+              <a href="https://cadillacdemo1.dealeron.com/searchnew.aspx" class="custom-link" target="_blank"
                 >https://cadillacdemo1.dealeron.com/searchnew.aspx</a
               >
             </li>
             <li>
               Search Results Page (SRP) - Used:
-              <a href="https://cadillacdemo1.dealeron.com/searchused.aspx" target="_blank"
+              <a href="https://cadillacdemo1.dealeron.com/searchused.aspx" class="custom-link" target="_blank"
                 >https://cadillacdemo1.dealeron.com/searchused.aspx</a
               >
             </li>
@@ -174,11 +215,11 @@
               Vehicle Details Page (VDP):
               <a
                 href="https://cadillacdemo1.dealeron.com/new-+-2024-Cadillac-LYRIQ-Sport-1GYKPTRK1RZ105143"
+                class="custom-link"
                 target="_blank"
                 >https://cadillacdemo1.dealeron.com/new-+-2024-Cadillac-LYRIQ-Sport-1GYKPTRK1RZ105143</a
               >
             </li>
-          </ul>
           <h4>Vehicle Research & Quotes</h4>
           <ul>
             <li><code>/quote.aspx</code> - Quick Quote Request</li>
@@ -661,12 +702,12 @@
               For lengthy headings, consider splitting into heading/subheading format using classes like
               <code>heading-xl</code>, <code>heading-lg</code>, <code>h1</code>. Example:
             </p>
-            <pre><code class="language-html"><!-- Instead of -->
-      &lt;h1&gt;#NAME# - Auto Repair and Service Center You Can Depend on at #CITY#&lt;/h1&gt;
-      
-      <!-- Use -->
-      &lt;h1 class="heading-lg"&gt;#NAME#&lt;/h1&gt;
-      &lt;h2 class="margin-top-x margin-bottom-1x"&gt;Auto Repair and Service Center You Can Depend on at #CITY#&lt;/h2&gt;</code></pre>
+            <pre><code class="language-html">&lt;!-- Instead of --&gt;
+&lt;h1&gt;#NAME# - Auto Repair and Service Center You Can Depend on at #CITY#&lt;/h1&gt;
+
+&lt;!-- Use --&gt;
+&lt;h1 class="heading-lg"&gt;#NAME#&lt;/h1&gt;
+&lt;h2 class="margin-top-x margin-bottom-1x"&gt;Auto Repair and Service Center You Can Depend on at #CITY#&lt;/h2&gt;</code></pre>
           </article>
         </section>
         <!-- GA4 Tagging Section -->
@@ -740,15 +781,13 @@
           </ul>
           <p>Example of a standard hyperlink (ga4-hyperlink-open):</p>
           <pre><code class="language-html">&lt;a href="SOURCE"
-         data-dotagging-link-url="SOURCE"
-         data-dotagging-event="cta_interaction"
-         data-dotagging-product-name="Website|Custom Content"
-         data-dotagging-event-action-result="open"
-         data-dotagging-element-type="body"
-         data-dotagging-element-order="0"
-         data-dotagging-element-subtype="hyperlink"&gt;
-         Click Me
-      &lt;/a&gt;</code></pre>
+   data-dotagging-link-url="SOURCE"
+   data-dotagging-event="cta_interaction"
+   data-dotagging-product-name="Website|Custom Content"
+   data-dotagging-event-action-result="open"
+   data-dotagging-element-type="body"
+   data-dotagging-element-order="0"
+   data-dotagging-element-subtype="hyperlink"&gt;CONTENT&lt;/a&gt;</code></pre>
           <h5>CTA Buttons</h5>
           <ul>
             <li><code>ga4-cta-open</code> - For CTAs that stay in the same tab</li>
@@ -757,16 +796,14 @@
           </ul>
           <p>Example of a CTA button (ga4-cta-open):</p>
           <pre><code class="language-html">&lt;a href="SOURCE"
-         class="btn btn-cta"
-         data-dotagging-link-url="SOURCE"
-         data-dotagging-event="cta_interaction"
-         data-dotagging-product-name="Website|Custom Content"
-         data-dotagging-event-action-result="open"
-         data-dotagging-element-type="body"
-         data-dotagging-element-order="0"
-         data-dotagging-element-subtype="cta_button"&gt;
-         CTA Label
-      &lt;/a&gt;</code></pre>
+   class="btn btn-cta"
+   data-dotagging-link-url="SOURCE"
+   data-dotagging-event="cta_interaction"
+   data-dotagging-product-name="Website|Custom Content"
+   data-dotagging-event-action-result="open"
+   data-dotagging-element-type="body"
+   data-dotagging-element-order="0"
+   data-dotagging-element-subtype="cta_button"&gt;CONTENT&lt;/a&gt;</code></pre>
           <h5>Image Links</h5>
           <ul>
             <li><code>ga4-img-open</code> - For image links that stay in the same tab</li>
@@ -907,14 +944,14 @@
               <li>
                 <strong>responsive-image-text</strong> - Responsive image with text layout
                 <pre><code class="language-html">&lt;div class="row flex-center-md"&gt;
-       &lt;div class="col-md-6 col-md-push-6"&gt;
-         &lt;div role="img" aria-label="#NAME# in #CITY# #STATE#" style="background-image: url('IMAGE_SOURCE');" class="img-background img-cover"&gt;&lt;/div&gt;
-       &lt;/div&gt;
-       &lt;div class="col-md-6 col-md-pull-6"&gt;
-         &lt;div class="margin-top-2x visible-xs visible-sm"&gt;&lt;/div&gt;
-         &lt;!-- Place your text content here --&gt;
-       &lt;/div&gt;
-      &lt;/div&gt;</code></pre>
+  &lt;div class="col-md-6 col-md-push-6"&gt;
+    &lt;div role="img" aria-label="#NAME# in #CITY# #STATE#" style="background-image: url('IMAGE_SOURCE');" class="img-background img-cover"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="col-md-6 col-md-pull-6"&gt;
+    &lt;div class="margin-top-2x visible-xs visible-sm"&gt;&lt;/div&gt;
+    &lt;!-- Place your text content here --&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
               </li>
             </ul>
             <h4>Bootstrap 3 and Extend.css</h4>
@@ -947,20 +984,20 @@
               <li>Add your custom snippets following this format:</li>
             </ol>
             <pre><code class="language-json">{
-        "DealerOn Container": {
-      "prefix": "do-container",
-      "body": [
-        "&lt;div class=\"container\"&gt;",
-        "  &lt;div class=\"row\"&gt;",
-        "    &lt;div class=\"col-12\"&gt;",
-        "      $1",
-        "    &lt;/div&gt;",
-        "  &lt;/div&gt;",
-        "&lt;/div&gt;"
-      ],
-      "description": "Basic DealerOn container structure"
-        }
-      }</code></pre>
+    "DealerOn Container": {
+    "prefix": "do-container",
+    "body": [
+    "&lt;div class=\"container\"&gt;",
+    "  &lt;div class=\"row\"&gt;",
+    "    &lt;div class=\"col-12\"&gt;",
+    "      $1",
+    "    &lt;/div&gt;",
+    "  &lt;/div&gt;",
+    "&lt;/div&gt;"
+    ],
+    "description": "Basic DealerOn container structure"
+  }
+}</code></pre>
           </article>
           <article id="emmet">
             <h3>Emmet</h3>
@@ -1092,7 +1129,7 @@
               screen-reader-only paragraph below the video element:
             </p>
             <pre><code class="language-html">&lt;video src="intro.mp4" autoplay loop muted&gt;&lt;/video&gt;
-      &lt;p class="sr-only"&gt;The above video shows a silver Toyota Camry driving through a city at sunset.&lt;/p&gt;</code></pre>
+&lt;p class="sr-only"&gt;The above video shows a silver Toyota Camry driving through a city at sunset.&lt;/p&gt;</code></pre>
             <div class="alert alert-info">
               <i class="fas fa-exclamation-triangle"></i> <strong>Tip:</strong> Use Chrome's "Search video frame with
               Google" feature to help identify vehicle models for descriptions.
@@ -1108,9 +1145,9 @@
               </li>
             </ul>
             <pre><code class="language-html">&lt;div class="form-group"&gt;
-        &lt;label for="email" class="sr-only"&gt;Email Address&lt;/label&gt;
-        &lt;input type="email" id="email" class="form-control" required&gt;
-      &lt;/div&gt;</code></pre>
+  &lt;label for="email" class="sr-only"&gt;Email Address&lt;/label&gt;
+  &lt;input type="email" id="email" class="form-control" required&gt;
+&lt;/div&gt;</code></pre>
           </article>
         </section>
         <section id="image-sources-and-copyright">
