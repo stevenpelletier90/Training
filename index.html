@@ -24,7 +24,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
   </head>
-  <body data-bs-spy="scroll" data-bs-target=".nav-wrapper" data-bs-offset="100" tabindex="0">
+  <body>
     <!-- Mobile Header -->
     <header class="d-lg-none bg-dark fixed-top">
       <div class="container-fluid">
@@ -45,13 +45,7 @@
           <div class="nav flex-column flex-nowrap nav-wrapper">
             <a class="nav-link text-white" href="#page-types">Page Types</a>
 
-            <div>
-              <a class="nav-link text-white" href="#replacement-codes">Replacement Codes</a>
-              <div class="ms-3 mb-3">
-                <a class="nav-link text-white-50 small py-1" href="#replacement-codes">All Replacement Codes</a>
-                <a class="nav-link text-white-50 small py-1" href="#contact-block-codes">Contact Block Codes</a>
-              </div>
-            </div>
+            <a class="nav-link text-white" href="#replacement-codes">Replacement Codes</a>
 
             <a class="nav-link text-white" href="#best-practices">Best Practices</a>
             <a class="nav-link text-white" href="#what-not-to-migrate">What Not to Migrate</a>
@@ -99,14 +93,6 @@
             <a class="nav-link text-white" href="#page-types" data-bs-dismiss="offcanvas">Page Types</a>
 
             <a class="nav-link text-white" href="#replacement-codes" data-bs-dismiss="offcanvas">Replacement Codes</a>
-            <div class="ms-3 mb-3">
-              <a class="nav-link text-white-50 small py-1" href="#replacement-codes" data-bs-dismiss="offcanvas"
-                >All Replacement Codes</a
-              >
-              <a class="nav-link text-white-50 small py-1" href="#contact-block-codes" data-bs-dismiss="offcanvas"
-                >Contact Block Codes</a
-              >
-            </div>
 
             <a class="nav-link text-white" href="#best-practices" data-bs-dismiss="offcanvas">Best Practices</a>
             <a class="nav-link text-white" href="#what-not-to-migrate" data-bs-dismiss="offcanvas"
@@ -159,7 +145,7 @@
       </div>
 
       <!-- Main Content Area -->
-      <main class="main-content">
+      <main class="main-content" data-bs-spy="scroll" data-bs-target=".nav-wrapper" data-bs-offset="100" tabindex="0">
         <!-- Overview Section -->
         <section>
           <h1>Content Migration Training</h1>
@@ -446,7 +432,7 @@
         </section>
 
         <section id="contact-block-codes">
-          <h2>Contact Block Replacement Codes</h2>
+          <h3>Contact Block Replacement Codes</h3>
           <p>
             When building custom internal pages with a bottom/footer section featuring maps and/or contact information,
             you can utilize special replacement codes that populate an all-in-one Contact block.
