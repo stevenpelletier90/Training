@@ -43,11 +43,14 @@
         <div class="d-flex flex-column h-100 p-3">
           <h5 class="text-white mb-4">Content Migration Guide</h5>
           <div class="nav flex-column flex-nowrap nav-wrapper">
+            <a class="nav-link text-white" href="#overview">Overview</a>
             <a class="nav-link text-white" href="#page-types">Page Types</a>
 
             <a class="nav-link text-white" href="#replacement-codes">Replacement Codes</a>
+            <a class="nav-link text-white" href="#replacement-code-blocks">Contact Block Codes</a>
 
             <a class="nav-link text-white" href="#best-practices">Best Practices</a>
+            <a class="nav-link text-white" href="#padding-and-margin">Padding and Margin</a>
             <a class="nav-link text-white" href="#what-not-to-migrate">What Not to Migrate</a>
             <a class="nav-link text-white" href="#faqs">FAQs & Special Situations</a>
             <a class="nav-link text-white" href="#ga4-tagging">GA4 Tagging</a>
@@ -90,11 +93,16 @@
         </div>
         <div class="offcanvas-body">
           <div class="nav flex-column flex-nowrap nav-wrapper">
+            <a class="nav-link text-white" href="#overview" data-bs-dismiss="offcanvas">Overview</a>
             <a class="nav-link text-white" href="#page-types" data-bs-dismiss="offcanvas">Page Types</a>
 
             <a class="nav-link text-white" href="#replacement-codes" data-bs-dismiss="offcanvas">Replacement Codes</a>
+            <a class="nav-link text-white" href="#replacement-code-blocks" data-bs-dismiss="offcanvas"
+              >Contact Block Codes</a
+            >
 
             <a class="nav-link text-white" href="#best-practices" data-bs-dismiss="offcanvas">Best Practices</a>
+            <a class="nav-link text-white" href="#padding-and-margin" data-bs-dismiss="offcanvas">Padding and Margin</a>
             <a class="nav-link text-white" href="#what-not-to-migrate" data-bs-dismiss="offcanvas"
               >What Not to Migrate</a
             >
@@ -145,9 +153,15 @@
       </div>
 
       <!-- Main Content Area -->
-      <main class="main-content" data-bs-spy="scroll" data-bs-target=".nav-wrapper" data-bs-offset="100" tabindex="0">
+      <main
+        class="main-content"
+        data-bs-spy="scroll"
+        data-bs-target=".nav-wrapper"
+        data-bs-offset="150"
+        data-bs-smooth-scroll="true"
+        tabindex="0">
         <!-- Overview Section -->
-        <section>
+        <section id="overview">
           <h1>Content Migration Training</h1>
           <p>
             This guide provides comprehensive instructions for migrating content to the DealerOn platform. It covers
@@ -431,7 +445,7 @@
           </ul>
         </section>
 
-        <section id="contact-block-codes">
+        <section id="replacement-code-blocks">
           <h3>Contact Block Replacement Codes</h3>
           <p>
             When building custom internal pages with a bottom/footer section featuring maps and/or contact information,
@@ -515,6 +529,385 @@
             visually, that's fine.
           </p>
         </section>
+
+        <!-- Padding and Margin Classes Section -->
+        <section id="padding-and-margin">
+          <h2>Padding and Margin Classes</h2>
+          <h3 id="padding">Padding</h3>
+          <p>
+            Padding options include all sides, vertical, horizontal, and isolated to each direction (top, right, bottom,
+            left). Padding sizes vary from .5em to 4em.
+          </p>
+
+          <ul>
+            <li><code>pad_5x = .5em</code></li>
+            <li><code>pad-1x = 1em</code></li>
+            <li><code>pad-2x = 2em</code></li>
+            <li><code>pad-3x = 3em</code></li>
+            <li><code>pad-4x = 4em</code></li>
+            <li><code>pad-x = no padding</code></li>
+          </ul>
+
+          <h4 id="lists-padding">Lists (padding)</h4>
+          <p>NOTE: Class for list items should be placed on the UL or OL element, not the LI.</p>
+
+          <p>Padding on all sides, around each LI item.</p>
+          <p><code>.list-pad_5x .list-pad-1x .list-pad-2x .list-pad-3x .list-pad-4x</code></p>
+
+          <h3>Example</h3>
+          <p>List with 1em padding on each side of the list item (not ul). (<code>.list-pad-1x</code>)</p>
+          <ul class="list-pad-1x">
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Consectetur adipiscing elit</li>
+          </ul>
+
+          <h3>Vertical padding top & bottom</h3>
+          <p>
+            <code
+              >.list-pad-vert-x .list-pad-vert_5x .list-pad-vert-1x .list-pad-vert-2x .list-pad-vert-3x
+              .list-pad-vert-4x</code
+            >
+          </p>
+
+          <h3>Example</h3>
+          <p>List with 1em padding on top and bottom of the list item (not ul). (<code>.list-pad-vert-1x</code>)</p>
+          <ul class="list-pad-vert-1x">
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Consectetur adipiscing elit</li>
+          </ul>
+
+          <h3>Horizontal padding left & right</h3>
+          <p>
+            <code
+              >.list-pad-horz-x .list-pad-horz_5x .list-pad-horz-1x .list-pad-horz-2x .list-pad-horz-3x
+              .list-pad-horz-4x</code
+            >
+          </p>
+
+          <h3>Example</h3>
+          <p>List with 1em padding on left and right of the list item (not ul). (<code>.list-pad-horz-1x</code>)</p>
+          <ul class="list-pad-horz-1x">
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Consectetur adipiscing elit</li>
+          </ul>
+
+          <h3>Isolated padding top, bottom, left, or right</h3>
+
+          <h4>Top</h4>
+          <p>
+            <code>.list-pad-top-x</code><br />
+            <code>.list-pad-top_5x</code><br />
+            <code>.list-pad-top-1x</code><br />
+            <code>.list-pad-top-2x</code><br />
+            <code>.list-pad-top-3x</code><br />
+            <code>.list-pad-top-4x</code>
+          </p>
+
+          <h4>Bottom</h4>
+          <p>
+            <code>.list-pad-bottom-x</code><br />
+            <code>.list-pad-bottom_5x</code><br />
+            <code>.list-pad-bottom-1x</code><br />
+            <code>.list-pad-bottom-2x</code><br />
+            <code>.list-pad-bottom-3x</code><br />
+            <code>.list-pad-bottom-4x</code>
+          </p>
+
+          <h4>Left</h4>
+          <p>
+            <code>.list-pad-left-x</code><br />
+            <code>.list-pad-left_5x</code><br />
+            <code>.list-pad-left-1x</code><br />
+            <code>.list-pad-left-2x</code><br />
+            <code>.list-pad-left-3x</code><br />
+            <code>.list-pad-left-4x</code>
+          </p>
+
+          <h4>Right</h4>
+          <p>
+            <code>.list-pad-right-x</code><br />
+            <code>.list-pad-right_5x</code><br />
+            <code>.list-pad-right-1x</code><br />
+            <code>.list-pad-right-2x</code><br />
+            <code>.list-pad-right-3x</code><br />
+            <code>.list-pad-right-4x</code>
+          </p>
+
+          <h3>Example</h3>
+          <p>List with 1em padding on top of the list item (not ul). (<code>.list-pad-top-1x</code>)</p>
+          <ul class="list-pad-top-1x">
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Consectetur adipiscing elit</li>
+          </ul>
+
+          <h4 id="all-elements-padding">All elements (padding)</h4>
+          <p>Padding on all sides.</p>
+          <p><code>.pad_5x .pad-1x .pad-2x .pad-3x .pad-4x</code></p>
+
+          <h3>Example</h3>
+          <p>Item with 1em padding on each side of the item item. (<code>.pad-1x</code>)</p>
+          <div class="pad-1x">Lorem ipsum dolor sit amet</div>
+
+          <h3>Vertical padding top & bottom</h3>
+          <p><code>.pad-vert-x .pad-vert_5x .pad-vert-1x .pad-vert-2x .pad-vert-3x .pad-vert-4x</code></p>
+
+          <h3>Example</h3>
+          <p>Item with 1em padding on top and bottom of the item item. (<code>.pad-vert-1x</code>)</p>
+          <div class="pad-vert-1x">Lorem ipsum dolor sit amet</div>
+
+          <h3>Horizontal padding left & right</h3>
+          <p><code>.pad-horz-x .pad-horz_5x .pad-horz-1x .pad-horz-2x .pad-horz-3x .pad-horz-4x</code></p>
+
+          <h3>Example</h3>
+          <p>Item with 1em padding on left and right of the item item. (<code>.pad-horz-1x</code>)</p>
+          <div class="pad-horz-1x">Lorem ipsum dolor sit amet</div>
+
+          <h3>Isolated padding top, bottom, left, or right</h3>
+
+          <h4>Top</h4>
+          <p>
+            <code>.pad-top-x</code><br />
+            <code>.pad-top_5x</code><br />
+            <code>.pad-top-1x</code><br />
+            <code>.pad-top-2x</code><br />
+            <code>.pad-top-3x</code><br />
+            <code>.pad-top-4x</code>
+          </p>
+
+          <h4>Bottom</h4>
+          <p>
+            <code>.pad-bottom-x</code><br />
+            <code>.pad-bottom_5x</code><br />
+            <code>.pad-bottom-1x</code><br />
+            <code>.pad-bottom-2x</code><br />
+            <code>.pad-bottom-3x</code><br />
+            <code>.pad-bottom-4x</code>
+          </p>
+
+          <h4>Left</h4>
+          <p>
+            <code>.pad-left-x</code><br />
+            <code>.pad-left_5x</code><br />
+            <code>.pad-left-1x</code><br />
+            <code>.pad-left-2x</code><br />
+            <code>.pad-left-3x</code><br />
+            <code>.pad-left-4x</code>
+          </p>
+
+          <h4>Right</h4>
+          <p>
+            <code>.pad-right-x</code><br />
+            <code>.pad-right_5x</code><br />
+            <code>.pad-right-1x</code><br />
+            <code>.pad-right-2x</code><br />
+            <code>.pad-right-3x</code><br />
+            <code>.pad-right-4x</code>
+          </p>
+
+          <h3>Example</h3>
+          <p>Item with 1em padding on top of the item. (<code>.pad-top-1x</code>)</p>
+          <div class="pad-top-1x">Lorem ipsum dolor sit amet</div>
+
+          <p><code>.pad-x</code></p>
+          <p><code>.pad-x</code></p>
+
+          <h3>Example</h3>
+          <p>Removes all padding (<code>.pad-x</code>)</p>
+          <div class="pad-x">Lorem ipsum dolor sit amet</div>
+
+          <h3 id="margin">Margin</h3>
+          <p>
+            Margin options include all sides, vertical, horizontal, and isolated to each direction (top, right, bottom,
+            left). Margin sizes vary from .5em to 4em.
+          </p>
+
+          <ul>
+            <li><code>margin_5x = .5em</code></li>
+            <li><code>margin-1x = 1em</code></li>
+            <li><code>margin-2x = 2em</code></li>
+            <li><code>margin-3x = 3em</code></li>
+            <li><code>margin-4x = 4em</code></li>
+            <li><code>margin-x = no margin</code></li>
+          </ul>
+
+          <p><code>.margin-auto</code></p>
+          <p>Centers content within a section - best used to center images.</p>
+
+          <h3>Example</h3>
+          <p><code>.margin-auto { margin-left: auto; margin-right: auto}</code></p>
+
+          <h4 id="lists-margin">Lists (margin)</h4>
+          <p>NOTE: Class for list items should be placed on the UL or OL element, not the LI.</p>
+
+          <p>Margin on all sides, around each LI item.</p>
+          <p><code>.list-margin_5x .list-margin-1x .list-margin-2x .list-margin-3x .list-margin-4x</code></p>
+
+          <h3>Example</h3>
+          <p>List with 1em margin on each side of the list item (not ul). (<code>.list-margin-1x</code>)</p>
+          <ul class="list-margin-1x">
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Consectetur adipiscing elit</li>
+          </ul>
+
+          <h3>Vertical margin top & bottom</h3>
+          <p>
+            <code
+              >.list-margin-vert-x .list-margin-vert_5x .list-margin-vert-1x .list-margin-vert-2x .list-margin-vert-3x
+              .list-margin-vert-4x</code
+            >
+          </p>
+
+          <h3>Example</h3>
+          <p>List with 1em margin on top and bottom of the list item (not ul). (<code>.list-margin-vert-1x</code>)</p>
+          <ul class="list-margin-vert-1x">
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Consectetur adipiscing elit</li>
+          </ul>
+
+          <h3>Horizontal margin left & right</h3>
+          <p>
+            <code
+              >.list-margin-horz-x .list-margin-horz_5x .list-margin-horz-1x .list-margin-horz-2x .list-margin-horz-3x
+              .list-margin-horz-4x</code
+            >
+          </p>
+
+          <h3>Example</h3>
+          <p>List with 1em margin on left and right of the list item (not ul). (<code>.list-margin-horz-1x</code>)</p>
+          <ul class="list-margin-horz-1x">
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Consectetur adipiscing elit</li>
+          </ul>
+
+          <h3>Isolated margin top, bottom, left, or right</h3>
+
+          <h4>Top</h4>
+          <p>
+            <code>.list-margin-top-x</code><br />
+            <code>.list-margin-top_5x</code><br />
+            <code>.list-margin-top-1x</code><br />
+            <code>.list-margin-top-2x</code><br />
+            <code>.list-margin-top-3x</code><br />
+            <code>.list-margin-top-4x</code>
+          </p>
+
+          <h4>Bottom</h4>
+          <p>
+            <code>.list-margin-bottom-x</code><br />
+            <code>.list-margin-bottom_5x</code><br />
+            <code>.list-margin-bottom-1x</code><br />
+            <code>.list-margin-bottom-2x</code><br />
+            <code>.list-margin-bottom-3x</code><br />
+            <code>.list-margin-bottom-4x</code>
+          </p>
+
+          <h4>Left</h4>
+          <p>
+            <code>.list-margin-left-x</code><br />
+            <code>.list-margin-left_5x</code><br />
+            <code>.list-margin-left-1x</code><br />
+            <code>.list-margin-left-2x</code><br />
+            <code>.list-margin-left-3x</code><br />
+            <code>.list-margin-left-4x</code>
+          </p>
+
+          <h4>Right</h4>
+          <p>
+            <code>.list-margin-right-x</code><br />
+            <code>.list-margin-right_5x</code><br />
+            <code>.list-margin-right-1x</code><br />
+            <code>.list-margin-right-2x</code><br />
+            <code>.list-margin-right-3x</code><br />
+            <code>.list-margin-right-4x</code>
+          </p>
+
+          <h3>Example</h3>
+          <p>List with 1em margin on top of the list item (not ul). (<code>.list-margin-top-1x</code>)</p>
+          <ul class="list-margin-top-1x">
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Consectetur adipiscing elit</li>
+          </ul>
+
+          <h4 id="all-elements-margin">All elements (margin)</h4>
+          <p>Margin on all sides.</p>
+          <p><code>.margin_5x .margin-1x .margin-2x .margin-3x .margin-4x</code></p>
+
+          <h3>Example</h3>
+          <p>Item with 1em margin on each side of the item item. (<code>.margin-1x</code>)</p>
+          <div class="margin-1x">Lorem ipsum dolor sit amet</div>
+
+          <h3>Vertical margin top & bottom</h3>
+          <p>
+            <code>.margin-vert-x .margin-vert_5x .margin-vert-1x .margin-vert-2x .margin-vert-3x .margin-vert-4x</code>
+          </p>
+
+          <h3>Example</h3>
+          <p>Item with 1em margin on top and bottom of the item item. (<code>.margin-vert-1x</code>)</p>
+          <div class="margin-vert-1x">Lorem ipsum dolor sit amet</div>
+
+          <h3>Horizontal margin left & right</h3>
+          <p>
+            <code>.margin-horz-x .margin-horz_5x .margin-horz-1x .margin-horz-2x .margin-horz-3x .margin-horz-4x</code>
+          </p>
+
+          <h3>Example</h3>
+          <p>Item with 1em margin on left and right of the item item. (<code>.margin-horz-1x</code>)</p>
+          <div class="margin-horz-1x">Lorem ipsum dolor sit amet</div>
+
+          <h3>Isolated margin top, bottom, left, or right</h3>
+
+          <h4>Top</h4>
+          <p>
+            <code>.margin-top-x</code><br />
+            <code>.margin-top_5x</code><br />
+            <code>.margin-top-1x</code><br />
+            <code>.margin-top-2x</code><br />
+            <code>.margin-top-3x</code><br />
+            <code>.margin-top-4x</code>
+          </p>
+
+          <h4>Bottom</h4>
+          <p>
+            <code>.margin-bottom-x</code><br />
+            <code>.margin-bottom_5x</code><br />
+            <code>.margin-bottom-1x</code><br />
+            <code>.margin-bottom-2x</code><br />
+            <code>.margin-bottom-3x</code><br />
+            <code>.margin-bottom-4x</code>
+          </p>
+
+          <h4>Left</h4>
+          <p>
+            <code>.margin-left-x</code><br />
+            <code>.margin-left_5x</code><br />
+            <code>.margin-left-1x</code><br />
+            <code>.margin-left-2x</code><br />
+            <code>.margin-left-3x</code><br />
+            <code>.margin-left-4x</code>
+          </p>
+
+          <h4>Right</h4>
+          <p>
+            <code>.margin-right-x</code><br />
+            <code>.margin-right_5x</code><br />
+            <code>.margin-right-1x</code><br />
+            <code>.margin-right-2x</code><br />
+            <code>.margin-right-3x</code><br />
+            <code>.margin-right-4x</code>
+          </p>
+
+          <h3>Example</h3>
+          <p>Item with 1em margin on top of the item. (<code>.margin-top-1x</code>)</p>
+          <div class="margin-top-1x">Lorem ipsum dolor sit amet</div>
+
+          <p><code>.margin-x</code></p>
+          <p><code>.margin-x</code></p>
+
+          <h3>Example</h3>
+          <p>Removes all margin (<code>.margin-x</code>)</p>
+          <div class="margin-x">Lorem ipsum dolor sit amet</div>
+        </section>
+
         <!-- What Not to Migrate Section -->
         <section id="what-not-to-migrate">
           <h2>What Not to Migrate</h2>
@@ -842,28 +1235,33 @@
         <!-- Development Tools Section -->
         <section id="development-tools">
           <h2>Development Tools</h2>
-          <article id="vscode-snippets">
-            <h3>VS Code Snippets</h3>
-            <p>
-              VS Code snippets can significantly speed up content migration by providing reusable code templates.
-              DealerOn maintains official snippets to ensure consistency across projects.
-            </p>
-            <h4>Important DealerOn Snippets</h4>
-            <ul>
-              <li>
-                <strong>heroTemplate</strong> - Classic hero banner layout with main content and sidebar
-                <p>Provides a clean layout structure with minimal elements, perfect for building custom pages.</p>
-              </li>
-              <li>
-                <strong>heroTemplatePopulatedSidebar</strong> - Enhanced hero banner layout with pre-populated elements
-                <p>
-                  Includes the same layout as heroTemplate but comes with pre-populated elements such as CTAs, phone
-                  numbers, dealer name, etc.
-                </p>
-              </li>
-              <li>
-                <strong>faq-accordion</strong> - Bootstrap 3 accordion meant for FAQs
-                <pre><code class="language-html">&lt;div class="accordion pad-top-1x"&gt;
+          <p>
+            The following tools and utilities help streamline the development process and ensure consistent code quality
+            across projects.
+          </p>
+        </section>
+        <section id="vscode-snippets" class="ms-4">
+          <h3>VS Code Snippets</h3>
+          <p>
+            VS Code snippets can significantly speed up content migration by providing reusable code templates. DealerOn
+            maintains official snippets to ensure consistency across projects.
+          </p>
+          <h4>Important DealerOn Snippets</h4>
+          <ul>
+            <li>
+              <strong>heroTemplate</strong> - Classic hero banner layout with main content and sidebar
+              <p>Provides a clean layout structure with minimal elements, perfect for building custom pages.</p>
+            </li>
+            <li>
+              <strong>heroTemplatePopulatedSidebar</strong> - Enhanced hero banner layout with pre-populated elements
+              <p>
+                Includes the same layout as heroTemplate but comes with pre-populated elements such as CTAs, phone
+                numbers, dealer name, etc.
+              </p>
+            </li>
+            <li>
+              <strong>faq-accordion</strong> - Bootstrap 3 accordion meant for FAQs
+              <pre><code class="language-html">&lt;div class="accordion pad-top-1x"&gt;
         &lt;div class="accordion-item"&gt;
       &lt;div class="accordion-question pad-1x"&gt;
         &lt;h4&gt;QUESTION 1&lt;/h4&gt;
@@ -904,10 +1302,10 @@
       });
         });
       &lt;/script&gt;</code></pre>
-              </li>
-              <li>
-                <strong>iframe16x9</strong> - Bootstrap 3 responsive 16:9 iframe
-                <pre><code class="language-html">&lt;div class="embed-responsive embed-responsive-16by9"&gt;
+            </li>
+            <li>
+              <strong>iframe16x9</strong> - Bootstrap 3 responsive 16:9 iframe
+              <pre><code class="language-html">&lt;div class="embed-responsive embed-responsive-16by9"&gt;
         &lt;iframe class="embed-responsive-item"
             src="IFRAME_SOURCE?rel=0&wmode=transparent"
             title="IFRAME_TITLE"
@@ -915,10 +1313,10 @@
             allowfullscreen&gt;
         &lt;/iframe&gt;
       &lt;/div&gt;</code></pre>
-              </li>
-              <li>
-                <strong>iframe4x3</strong> - Bootstrap 3 responsive 4:3 iframe
-                <pre><code class="language-html">&lt;div class="embed-responsive embed-responsive-4by3"&gt;
+            </li>
+            <li>
+              <strong>iframe4x3</strong> - Bootstrap 3 responsive 4:3 iframe
+              <pre><code class="language-html">&lt;div class="embed-responsive embed-responsive-4by3"&gt;
         &lt;iframe class="embed-responsive-item"
             src="IFRAME_SOURCE?rel=0&wmode=transparent"
             title="IFRAME_TITLE"
@@ -926,10 +1324,10 @@
             allowfullscreen&gt;
         &lt;/iframe&gt;
       &lt;/div&gt;</code></pre>
-              </li>
-              <li>
-                <strong>responsive-image-text</strong> - Responsive image with text layout
-                <pre><code class="language-html">&lt;div class="row flex-center-md"&gt;
+            </li>
+            <li>
+              <strong>responsive-image-text</strong> - Responsive image with text layout
+              <pre><code class="language-html">&lt;div class="row flex-center-md"&gt;
   &lt;div class="col-md-6 col-md-push-6"&gt;
     &lt;div role="img" aria-label="#NAME# in #CITY# #STATE#" style="background-image: url('IMAGE_SOURCE');" class="img-background img-cover"&gt;&lt;/div&gt;
   &lt;/div&gt;
@@ -938,38 +1336,37 @@
     &lt;!-- Place your text content here --&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-              </li>
-            </ul>
-            <h4>Bootstrap 3 and Extend.css</h4>
-            <p>
-              DealerOn uses Bootstrap 3 as its foundation, enhanced with custom classes through Extend.css. These
-              extensions provide additional functionality while maintaining compatibility with Bootstrap's core
-              features.
-            </p>
-            <h5>Key Extend.css Classes</h5>
-            <ul>
-              <li><code>pad-1x</code> through <code>pad-5x</code> - Standardized padding increments</li>
-              <li><code>pad-vert-1x</code> through <code>pad-vert-5x</code> - Vertical padding only</li>
-              <li><code>pad-horz-1x</code> through <code>pad-horz-5x</code> - Horizontal padding only</li>
-              <li><code>margin-1x</code> through <code>margin-5x</code> - Standardized margin increments</li>
-              <li><code>text-main</code>, <code>text-cta</code> - Brand-compliant text colors</li>
-              <li>
-                <code>bg-main</code>, <code>bg-alt1</code>, <code>bg-alt2</code> - Brand-compliant background colors
-              </li>
-            </ul>
-            <div class="alert alert-info">
-              <i class="fas fa-info-circle"></i> <strong>Note:</strong> When building new pages, prefer using Extend.css
-              classes over custom CSS to maintain consistency across the platform.
-            </div>
-            <h4>Creating Custom Snippets</h4>
-            <ol>
-              <li>Open VS Code</li>
-              <li>Press Ctrl+Shift+P (Windows) or Cmd+Shift+P (Mac)</li>
-              <li>Type "Snippets" and select "Configure User Snippets"</li>
-              <li>Choose "html.json" for HTML snippets</li>
-              <li>Add your custom snippets following this format:</li>
-            </ol>
-            <pre><code class="language-json">{
+            </li>
+          </ul>
+          <h4>Bootstrap 3 and Extend.css</h4>
+          <p>
+            DealerOn uses Bootstrap 3 as its foundation, enhanced with custom classes through Extend.css. These
+            extensions provide additional functionality while maintaining compatibility with Bootstrap's core features.
+          </p>
+          <h5>Key Extend.css Classes</h5>
+          <ul>
+            <li><code>pad-1x</code> through <code>pad-5x</code> - Standardized padding increments</li>
+            <li><code>pad-vert-1x</code> through <code>pad-vert-5x</code> - Vertical padding only</li>
+            <li><code>pad-horz-1x</code> through <code>pad-horz-5x</code> - Horizontal padding only</li>
+            <li><code>margin-1x</code> through <code>margin-5x</code> - Standardized margin increments</li>
+            <li><code>text-main</code>, <code>text-cta</code> - Brand-compliant text colors</li>
+            <li>
+              <code>bg-main</code>, <code>bg-alt1</code>, <code>bg-alt2</code> - Brand-compliant background colors
+            </li>
+          </ul>
+          <div class="alert alert-info">
+            <i class="fas fa-info-circle"></i> <strong>Note:</strong> When building new pages, prefer using Extend.css
+            classes over custom CSS to maintain consistency across the platform.
+          </div>
+          <h4>Creating Custom Snippets</h4>
+          <ol>
+            <li>Open VS Code</li>
+            <li>Press Ctrl+Shift+P (Windows) or Cmd+Shift+P (Mac)</li>
+            <li>Type "Snippets" and select "Configure User Snippets"</li>
+            <li>Choose "html.json" for HTML snippets</li>
+            <li>Add your custom snippets following this format:</li>
+          </ol>
+          <pre><code class="language-json">{
     "DealerOn Container": {
     "prefix": "do-container",
     "body": [
@@ -984,65 +1381,65 @@
     "description": "Basic DealerOn container structure"
   }
 }</code></pre>
-          </article>
-          <article id="emmet">
-            <h3>Emmet</h3>
-            <p>
-              Emmet is built into VS Code and can dramatically speed up HTML/CSS writing. Here are some useful Emmet
-              shortcuts for content migration:
-            </p>
-            <h4>Common Emmet Patterns</h4>
-            <p>
-              Reference the complete
-              <a href="https://docs.emmet.io/cheat-sheet/" target="_blank">Emmet Cheat Sheet</a> for all available
-              shortcuts.
-            </p>
-            <ul>
-              <li><code>container>row>col-12</code> → Basic Bootstrap grid</li>
-              <li><code>ul>li*3</code> → Unordered list with 3 items</li>
-              <li><code>.text-main+.text-cta</code> → Common text classes</li>
-            </ul>
-            <h4>DealerOn-Specific Patterns</h4>
-            <pre><code class="language-plaintext">section.pad-3x>h2{Section Title}+p.text-main</code></pre>
-            <p>This expands to a common section structure with proper padding and text classes.</p>
-          </article>
-          <article id="css-minification">
-            <h3>CSS Minification</h3>
-            <p>
-              CSS minification is the process of removing unnecessary characters such as whitespace, comments, and
-              formatting from CSS files. This results in smaller file sizes and faster load times.
-            </p>
-            <p>For CSS minification, use:</p>
-            <ul>
-              <li>
-                <a href="https://marketplace.visualstudio.com/items?itemName=bilal-shaikh.css-on-line" target="_blank"
-                  >CSS-On-Line VSCode Extension</a
-                >
-                - Provides efficient CSS minification capabilities
-              </li>
-              <li>
-                <a href="https://www.roxunlimited.com/css-beautifier" target="_blank">Rox Unlimited CSS Beautifier</a>
-              </li>
-            </ul>
-          </article>
-          <article id="bookmark-scripts">
-            <h3>Bookmark Scripts</h3>
-            <p>
-              Bookmark scripts (bookmarklets) can enhance CMS navigation and content migration workflow. Here are some
-              useful examples:
-            </p>
-            <p>
-              Access our collection of useful bookmark scripts in the
-              <a href="https://dealeron.atlassian.net/wiki/spaces/DD/pages/2391752705/Bookmark+Scripts" target="_blank">
-                DealerOn Bookmark Scripts Documentation </a
-              >.
-            </p>
-          </article>
         </section>
+        <section id="emmet">
+          <h3>Emmet</h3>
+          <p>
+            Emmet is built into VS Code and can dramatically speed up HTML/CSS writing. Here are some useful Emmet
+            shortcuts for content migration:
+          </p>
+          <h4>Common Emmet Patterns</h4>
+          <p>
+            Reference the complete
+            <a href="https://docs.emmet.io/cheat-sheet/" target="_blank">Emmet Cheat Sheet</a> for all available
+            shortcuts.
+          </p>
+          <ul>
+            <li><code>container>row>col-12</code> → Basic Bootstrap grid</li>
+            <li><code>ul>li*3</code> → Unordered list with 3 items</li>
+            <li><code>.text-main+.text-cta</code> → Common text classes</li>
+          </ul>
+          <h4>DealerOn-Specific Patterns</h4>
+          <pre><code class="language-plaintext">section.pad-3x>h2{Section Title}+p.text-main</code></pre>
+          <p>This expands to a common section structure with proper padding and text classes.</p>
+        </section>
+        <section id="css-minification">
+          <h3>CSS Minification</h3>
+          <p>
+            CSS minification is the process of removing unnecessary characters such as whitespace, comments, and
+            formatting from CSS files. This results in smaller file sizes and faster load times.
+          </p>
+          <p>For CSS minification, use:</p>
+          <ul>
+            <li>
+              <a href="https://marketplace.visualstudio.com/items?itemName=bilal-shaikh.css-on-line" target="_blank"
+                >CSS-On-Line VSCode Extension</a
+              >
+              - Provides efficient CSS minification capabilities
+            </li>
+            <li>
+              <a href="https://www.roxunlimited.com/css-beautifier" target="_blank">Rox Unlimited CSS Beautifier</a>
+            </li>
+          </ul>
+        </section>
+        <section id="bookmark-scripts">
+          <h3>Bookmark Scripts</h3>
+          <p>
+            Bookmark scripts (bookmarklets) can enhance CMS navigation and content migration workflow. Here are some
+            useful examples:
+          </p>
+          <p>
+            Access our collection of useful bookmark scripts in the
+            <a href="https://dealeron.atlassian.net/wiki/spaces/DD/pages/2391752705/Bookmark+Scripts" target="_blank">
+              DealerOn Bookmark Scripts Documentation </a
+            >.
+          </p>
+        </section>
+
         <!-- Accessibility Tools Section -->
         <section id="accessibility-tools">
           <h3>Accessibility Tools</h3>
-          <article>
+          <section>
             <h4>WAVE Browser Extension</h4>
             <p>
               The <a href="https://wave.webaim.org/extension/" target="_blank">WAVE Browser Extension</a> is a free tool
@@ -1053,20 +1450,20 @@
               <i class="fas fa-info-circle"></i> <strong>Pro Tip:</strong> Use the uncheck option for less crucial
               categories like ARIA and Structural Elements to make the preview window easier to read.
             </div>
-          </article>
-          <article>
+          </section>
+          <section>
             <h4>Contrast Checker</h4>
             <p>
               The <a href="https://webaim.org/resources/contrastchecker/" target="_blank">WebAIM Contrast Checker</a>
               helps adjust color combinations to meet AA accessibility standards. Use this tool to verify and adjust
               color combinations until they achieve the required contrast ratio.
             </p>
-          </article>
+          </section>
         </section>
         <!-- Accessibility Guidelines Section -->
         <section id="accessibility">
           <h2>Accessibility Guidelines</h2>
-          <article id="color-contrast">
+          <section id="color-contrast">
             <h3>Color Contrast</h3>
             <ul>
               <li>
@@ -1084,8 +1481,8 @@
                 Always include fallback background colors for text over images/videos using CSS or classes like bg-main
               </li>
             </ul>
-          </article>
-          <article id="alt-text">
+          </section>
+          <section id="alt-text">
             <h3>Alt Text & ARIA</h3>
             <p>
               Replace generic alt text like "#NAME# in #CITY# #STATE#" with descriptive content that explains the image,
@@ -1095,8 +1492,8 @@
               <i class="fas fa-exclamation-triangle"></i> <strong>Important:</strong> Always include title attributes
               for iframes (e.g., video embeds) that describe the embedded content.
             </div>
-          </article>
-          <article id="layouts">
+          </section>
+          <section id="layouts">
             <h3>Layouts & Code</h3>
             <ul>
               <li>
@@ -1107,8 +1504,8 @@
                 Place modals and pop-ups in the code immediately after their triggers for logical screen reader flow
               </li>
             </ul>
-          </article>
-          <article id="video">
+          </section>
+          <section id="video">
             <h3>Video</h3>
             <p>
               Decorative background videos require descriptive text, similar to alt text for images. Add a
@@ -1120,8 +1517,8 @@
               <i class="fas fa-exclamation-triangle"></i> <strong>Tip:</strong> Use Chrome's "Search video frame with
               Google" feature to help identify vehicle models for descriptions.
             </div>
-          </article>
-          <article id="forms">
+          </section>
+          <section id="forms">
             <h3>Forms</h3>
             <p>Never use <code>display: none;</code> on form labels - this causes accessibility errors. Instead:</p>
             <ul>
@@ -1134,7 +1531,7 @@
   &lt;label for="email" class="sr-only"&gt;Email Address&lt;/label&gt;
   &lt;input type="email" id="email" class="form-control" required&gt;
 &lt;/div&gt;</code></pre>
-          </article>
+          </section>
         </section>
         <section id="image-sources-and-copyright">
           <h2>Image Sources and Copyright</h2>

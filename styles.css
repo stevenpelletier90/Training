@@ -9,6 +9,11 @@ body {
   line-height: 1.6;
 }
 
+/* Enable smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
 /* Sidebar layout */
 .sidebar {
   height: 100vh;
@@ -53,6 +58,7 @@ body {
   height: 100vh;
   overflow-y: auto;
   position: relative;
+  scroll-behavior: smooth;
 }
 
 /* Mobile header */
@@ -109,6 +115,18 @@ body {
 
 .nav-link.active {
   background-color: rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+.nav-link.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 3px;
+  background-color: #64b5f6;
+  border-radius: 0 3px 3px 0;
 }
 
 /* Modern scrollbar styling */
@@ -134,14 +152,16 @@ body {
 
 /* Section spacing */
 main section {
-  scroll-margin-top: 0;
+  scroll-margin-top: 100px;
   margin-bottom: var(--bs-spacer);
   padding-top: 2rem;
+  position: relative;
 }
 
 @media (max-width: 991.98px) {
   main section {
     padding-top: 1.5rem;
+    scroll-margin-top: 80px;
   }
 }
 

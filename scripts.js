@@ -1,37 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
   const mainContent = document.querySelector(".main-content");
 
-  // Initialize ScrollSpy
-  const scrollSpy = new bootstrap.ScrollSpy(mainContent, {
-    target: ".nav-wrapper",
-    offset: 20,
-    method: "position",
-  });
-
-  // Handle navigation clicks
+  // Handle mobile menu close
   const navLinks = document.querySelectorAll(".nav-link");
   navLinks.forEach((link) => {
-    link.addEventListener("click", function (e) {
-      e.preventDefault();
-      const targetId = this.getAttribute("href");
-      const targetSection = document.querySelector(targetId);
-
-      if (targetSection) {
-        // Handle mobile menu
-        const offcanvas = bootstrap.Offcanvas.getInstance(document.querySelector("#sidebar"));
-        if (offcanvas) {
-          offcanvas.hide();
-        }
-
-        // Calculate scroll position
-        const offset = 20;
-        const targetPosition = targetSection.offsetTop - offset;
-
-        // Smooth scroll to target
-        mainContent.scrollTo({
-          top: targetPosition,
-          behavior: "smooth",
-        });
+    link.addEventListener("click", function () {
+      const offcanvas = bootstrap.Offcanvas.getInstance(document.querySelector("#sidebar"));
+      if (offcanvas) {
+        offcanvas.hide();
       }
     });
   });
