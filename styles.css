@@ -171,13 +171,20 @@ main pre[class*="language-"] {
   box-shadow: var(--bs-box-shadow);
   font-family: "JetBrains Mono", monospace !important;
   position: relative;
+  margin-top: 2.5rem;
+}
+
+/* Code block wrapper */
+.code-block-wrapper {
+  position: relative;
+  margin-bottom: 1rem;
 }
 
 /* Copy button styling */
 .copy-button {
   position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
+  top: 0;
+  right: 0;
   padding: 0.25rem 0.5rem;
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -190,6 +197,25 @@ main pre[class*="language-"] {
   display: flex;
   align-items: center;
   gap: 0.25rem;
+  z-index: 1;
+}
+
+@media (max-width: 767px) {
+  main pre[class*="language-"] {
+    margin-top: 0;
+  }
+
+  .copy-button {
+    position: static;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  pre[class*="language-"] {
+    margin-top: 0;
+  }
 }
 
 .copy-button:hover {
