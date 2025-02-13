@@ -10,34 +10,51 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Get the target section id from href
         const targetId = this.getAttribute("href");
+        const targetElement = document.querySelector(targetId);
 
-        // Scroll to target
-        document.querySelector(targetId).scrollIntoView({ behavior: "smooth" });
+        if (targetElement) {
+          // Update URL with hash
+          history.pushState(null, null, targetId);
 
-        // Close menu after a short delay to allow scroll to start
-        setTimeout(() => {
-          const offcanvas = bootstrap.Offcanvas.getInstance(document.querySelector("#sidebar"));
-          if (offcanvas) {
-            offcanvas.hide();
-          }
-        }, 150);
+          // Scroll to target
+          targetElement.scrollIntoView({ behavior: "smooth" });
+
+          // Close menu after a short delay to allow scroll to start
+          setTimeout(() => {
+            const offcanvas = bootstrap.Offcanvas.getInstance(document.querySelector("#sidebar"));
+            if (offcanvas) {
+              offcanvas.hide();
+            }
+          }, 150);
+        }
+      } else {
+        // For desktop, just update the URL
+        const targetId = this.getAttribute("href");
+        if (document.querySelector(targetId)) {
+          history.pushState(null, null, targetId);
+        }
       }
     });
   });
 
+  // Handle initial load with hash in URL
+  if (window.location.hash) {
+    const targetElement = document.querySelector(window.location.hash);
+    if (targetElement) {
+      setTimeout(() => {
+        targetElement.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    }
+  }
+
   // Add copy buttons to code blocks
   document.querySelectorAll('pre[class*="language-"]').forEach((pre) => {
-    // Create wrapper div
     const wrapper = document.createElement("div");
     wrapper.className = "code-block-wrapper";
 
-    // Insert wrapper before pre
     pre.parentNode.insertBefore(wrapper, pre);
-
-    // Move pre into wrapper
     wrapper.appendChild(pre);
 
-    // Create and add button before pre
     const button = document.createElement("button");
     button.className = "copy-button";
     button.innerHTML = '<i class="fas fa-copy"></i> Copy Code';
