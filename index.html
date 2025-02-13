@@ -39,7 +39,7 @@
 
     <div class="d-flex">
       <!-- Sidebar -->
-      <nav class="sidebar bg-dark d-none d-lg-block">
+      <nav id="sidebar-nav" class="sidebar bg-dark d-none d-lg-block">
         <div class="d-flex flex-column h-100 p-3">
           <h5 class="text-white mb-4">Content Migration Guide</h5>
           <div class="nav flex-column flex-nowrap nav-wrapper">
@@ -93,72 +93,49 @@
         </div>
         <div class="offcanvas-body">
           <div class="nav flex-column flex-nowrap nav-wrapper">
-            <a class="nav-link text-white" href="#overview" data-bs-dismiss="offcanvas">Overview</a>
-            <a class="nav-link text-white" href="#page-types" data-bs-dismiss="offcanvas">Page Types</a>
+            <a class="nav-link text-white" href="#overview">Overview</a>
+            <a class="nav-link text-white" href="#page-types">Page Types</a>
 
-            <a class="nav-link text-white" href="#replacement-codes" data-bs-dismiss="offcanvas">Replacement Codes</a>
-            <a class="nav-link text-white" href="#replacement-code-blocks" data-bs-dismiss="offcanvas"
-              >Contact Block Codes</a
-            >
+            <a class="nav-link text-white" href="#replacement-codes">Replacement Codes</a>
+            <a class="nav-link text-white" href="#replacement-code-blocks">Contact Block Codes</a>
 
-            <a class="nav-link text-white" href="#best-practices" data-bs-dismiss="offcanvas">Best Practices</a>
-            <a class="nav-link text-white" href="#padding-and-margin" data-bs-dismiss="offcanvas">Padding and Margin</a>
-            <a class="nav-link text-white" href="#what-not-to-migrate" data-bs-dismiss="offcanvas"
-              >What Not to Migrate</a
-            >
-            <a class="nav-link text-white" href="#faqs" data-bs-dismiss="offcanvas">FAQs & Special Situations</a>
-            <a class="nav-link text-white" href="#ga4-tagging" data-bs-dismiss="offcanvas">GA4 Tagging</a>
+            <a class="nav-link text-white" href="#best-practices">Best Practices</a>
+            <a class="nav-link text-white" href="#padding-and-margin">Padding and Margin</a>
+            <a class="nav-link text-white" href="#what-not-to-migrate">What Not to Migrate</a>
+            <a class="nav-link text-white" href="#faqs">FAQs & Special Situations</a>
+            <a class="nav-link text-white" href="#ga4-tagging">GA4 Tagging</a>
 
-            <a class="nav-link text-white" href="#development-tools" data-bs-dismiss="offcanvas">Development Tools</a>
+            <a class="nav-link text-white" href="#development-tools">Development Tools</a>
             <div class="ms-3 mb-3">
-              <a class="nav-link text-white-50 small py-1" href="#vscode-snippets" data-bs-dismiss="offcanvas"
-                >VS Code Snippets</a
-              >
-              <a class="nav-link text-white-50 small py-1" href="#emmet" data-bs-dismiss="offcanvas">Emmet</a>
-              <a class="nav-link text-white-50 small py-1" href="#css-minification" data-bs-dismiss="offcanvas"
-                >CSS Minification</a
-              >
-              <a class="nav-link text-white-50 small py-1" href="#bookmark-scripts" data-bs-dismiss="offcanvas"
-                >Bookmark Scripts</a
-              >
-              <a class="nav-link text-white-50 small py-1" href="#accessibility-tools" data-bs-dismiss="offcanvas"
-                >Accessibility Tools</a
-              >
+              <a class="nav-link text-white-50 small py-1" href="#vscode-snippets">VS Code Snippets</a>
+              <a class="nav-link text-white-50 small py-1" href="#emmet">Emmet</a>
+              <a class="nav-link text-white-50 small py-1" href="#css-minification">CSS Minification</a>
+              <a class="nav-link text-white-50 small py-1" href="#bookmark-scripts">Bookmark Scripts</a>
+              <a class="nav-link text-white-50 small py-1" href="#accessibility-tools">Accessibility Tools</a>
             </div>
 
             <div>
-              <a class="nav-link text-white" href="#accessibility" data-bs-dismiss="offcanvas"
-                >Accessibility Guidelines</a
-              >
+              <a class="nav-link text-white" href="#accessibility">Accessibility Guidelines</a>
               <div class="ms-3 mb-3">
-                <a class="nav-link text-white-50 small py-1" href="#color-contrast" data-bs-dismiss="offcanvas"
-                  >Color Contrast</a
-                >
-                <a class="nav-link text-white-50 small py-1" href="#alt-text" data-bs-dismiss="offcanvas"
-                  >Alt Text & ARIA</a
-                >
-                <a class="nav-link text-white-50 small py-1" href="#layouts" data-bs-dismiss="offcanvas"
-                  >Layouts & Code</a
-                >
-                <a class="nav-link text-white-50 small py-1" href="#video" data-bs-dismiss="offcanvas">Video</a>
-                <a class="nav-link text-white-50 small py-1" href="#forms" data-bs-dismiss="offcanvas">Forms</a>
+                <a class="nav-link text-white-50 small py-1" href="#color-contrast">Color Contrast</a>
+                <a class="nav-link text-white-50 small py-1" href="#alt-text">Alt Text & ARIA</a>
+                <a class="nav-link text-white-50 small py-1" href="#layouts">Layouts & Code</a>
+                <a class="nav-link text-white-50 small py-1" href="#video">Video</a>
+                <a class="nav-link text-white-50 small py-1" href="#forms">Forms</a>
               </div>
             </div>
 
-            <a class="nav-link text-white" href="#image-sources-and-copyright" data-bs-dismiss="offcanvas"
-              >Image Sources and Copyright</a
-            >
+            <a class="nav-link text-white" href="#image-sources-and-copyright">Image Sources and Copyright</a>
           </div>
         </div>
       </div>
-
       <!-- Main Content Area -->
       <main
         class="main-content"
-        data-bs-spy="scroll"
-        data-bs-target=".nav-wrapper"
-        data-bs-offset="150"
         data-bs-smooth-scroll="true"
+        data-bs-spy="scroll"
+        data-bs-target="#sidebar-nav"
+        data-bs-offset="0"
         tabindex="0">
         <!-- Overview Section -->
         <section id="overview">
@@ -1439,6 +1416,7 @@
         <!-- Accessibility Tools Section -->
         <section id="accessibility-tools">
           <h3>Accessibility Tools</h3>
+
           <section>
             <h4>WAVE Browser Extension</h4>
             <p>
@@ -1463,76 +1441,77 @@
         <!-- Accessibility Guidelines Section -->
         <section id="accessibility">
           <h2>Accessibility Guidelines</h2>
-          <section id="color-contrast">
-            <h3>Color Contrast</h3>
-            <ul>
-              <li>
-                Before adding custom background colors, check existing classes (bg-main, bg-alt1, bg-alt2, etc.) for
-                suitable options
-              </li>
-              <li>
-                Be cautious with opacity CSS - colors that pass contrast requirements can fail when opacity is applied
-              </li>
-              <li>
-                Use Firefox's Developer Tools Accessibility tab for accurate contrast checking, especially with images
-                or gradients
-              </li>
-              <li>
-                Always include fallback background colors for text over images/videos using CSS or classes like bg-main
-              </li>
-            </ul>
-          </section>
-          <section id="alt-text">
-            <h3>Alt Text & ARIA</h3>
-            <p>
-              Replace generic alt text like "#NAME# in #CITY# #STATE#" with descriptive content that explains the image,
-              such as "Toyota Corolla driving down a highway" or the actual text content within the image.
-            </p>
-            <div class="alert alert-warning">
-              <i class="fas fa-exclamation-triangle"></i> <strong>Important:</strong> Always include title attributes
-              for iframes (e.g., video embeds) that describe the embedded content.
-            </div>
-          </section>
-          <section id="layouts">
-            <h3>Layouts & Code</h3>
-            <ul>
-              <li>
-                Avoid img-background elements with overlaid text when possible - use standard &lt;img&gt; tags with
-                separated text
-              </li>
-              <li>
-                Place modals and pop-ups in the code immediately after their triggers for logical screen reader flow
-              </li>
-            </ul>
-          </section>
-          <section id="video">
-            <h3>Video</h3>
-            <p>
-              Decorative background videos require descriptive text, similar to alt text for images. Add a
-              screen-reader-only paragraph below the video element:
-            </p>
-            <pre><code class="language-html">&lt;video src="intro.mp4" autoplay loop muted&gt;&lt;/video&gt;
+        </section>
+        <section id="color-contrast">
+          <h3>Color Contrast</h3>
+          <ul>
+            <li>
+              Before adding custom background colors, check existing classes (bg-main, bg-alt1, bg-alt2, etc.) for
+              suitable options
+            </li>
+            <li>
+              Be cautious with opacity CSS - colors that pass contrast requirements can fail when opacity is applied
+            </li>
+            <li>
+              Use Firefox's Developer Tools Accessibility tab for accurate contrast checking, especially with images or
+              gradients
+            </li>
+            <li>
+              Always include fallback background colors for text over images/videos using CSS or classes like bg-main
+            </li>
+          </ul>
+        </section>
+        <section id="alt-text">
+          <h3>Alt Text & ARIA</h3>
+          <p>
+            Replace generic alt text like "#NAME# in #CITY# #STATE#" with descriptive content that explains the image,
+            such as "Toyota Corolla driving down a highway" or the actual text content within the image.
+          </p>
+          <div class="alert alert-warning">
+            <i class="fas fa-exclamation-triangle"></i> <strong>Important:</strong> Always include title attributes for
+            iframes (e.g., video embeds) that describe the embedded content.
+          </div>
+        </section>
+        <section id="layouts">
+          <h3>Layouts & Code</h3>
+          <ul>
+            <li>
+              Avoid img-background elements with overlaid text when possible - use standard &lt;img&gt; tags with
+              separated text
+            </li>
+            <li>
+              Place modals and pop-ups in the code immediately after their triggers for logical screen reader flow
+            </li>
+          </ul>
+        </section>
+        <section id="video">
+          <h3>Video</h3>
+          <p>
+            Decorative background videos require descriptive text, similar to alt text for images. Add a
+            screen-reader-only paragraph below the video element:
+          </p>
+          <pre><code class="language-html">&lt;video src="intro.mp4" autoplay loop muted&gt;&lt;/video&gt;
 &lt;p class="sr-only"&gt;The above video shows a silver Toyota Camry driving through a city at sunset.&lt;/p&gt;</code></pre>
-            <div class="alert alert-info">
-              <i class="fas fa-exclamation-triangle"></i> <strong>Tip:</strong> Use Chrome's "Search video frame with
-              Google" feature to help identify vehicle models for descriptions.
-            </div>
-          </section>
-          <section id="forms">
-            <h3>Forms</h3>
-            <p>Never use <code>display: none;</code> on form labels - this causes accessibility errors. Instead:</p>
-            <ul>
-              <li>Keep labels visible when possible</li>
-              <li>
-                Use the <code>sr-only</code> class to visually hide labels while maintaining screen reader accessibility
-              </li>
-            </ul>
-            <pre><code class="language-html">&lt;div class="form-group"&gt;
+          <div class="alert alert-info">
+            <i class="fas fa-exclamation-triangle"></i> <strong>Tip:</strong> Use Chrome's "Search video frame with
+            Google" feature to help identify vehicle models for descriptions.
+          </div>
+        </section>
+        <section id="forms">
+          <h3>Forms</h3>
+          <p>Never use <code>display: none;</code> on form labels - this causes accessibility errors. Instead:</p>
+          <ul>
+            <li>Keep labels visible when possible</li>
+            <li>
+              Use the <code>sr-only</code> class to visually hide labels while maintaining screen reader accessibility
+            </li>
+          </ul>
+          <pre><code class="language-html">&lt;div class="form-group"&gt;
   &lt;label for="email" class="sr-only"&gt;Email Address&lt;/label&gt;
   &lt;input type="email" id="email" class="form-control" required&gt;
 &lt;/div&gt;</code></pre>
-          </section>
         </section>
+
         <section id="image-sources-and-copyright">
           <h2>Image Sources and Copyright</h2>
           <h3>Adding Images to Your Content Migration Pages</h3>

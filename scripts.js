@@ -1,13 +1,26 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const mainContent = document.querySelector(".main-content");
-
-  // Handle mobile menu close
+  // Handle mobile menu close and smooth scroll
   const navLinks = document.querySelectorAll(".nav-link");
   navLinks.forEach((link) => {
-    link.addEventListener("click", function () {
-      const offcanvas = bootstrap.Offcanvas.getInstance(document.querySelector("#sidebar"));
-      if (offcanvas) {
-        offcanvas.hide();
+    link.addEventListener("click", function (e) {
+      // Only handle this for mobile view
+      if (window.innerWidth < 992) {
+        // Bootstrap's lg breakpoint
+        e.preventDefault(); // Prevent default action
+
+        // Get the target section id from href
+        const targetId = this.getAttribute("href");
+
+        // Scroll to target
+        document.querySelector(targetId).scrollIntoView({ behavior: "smooth" });
+
+        // Close menu after a short delay to allow scroll to start
+        setTimeout(() => {
+          const offcanvas = bootstrap.Offcanvas.getInstance(document.querySelector("#sidebar"));
+          if (offcanvas) {
+            offcanvas.hide();
+          }
+        }, 150);
       }
     });
   });
