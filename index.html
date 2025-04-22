@@ -62,6 +62,7 @@
                 <a class="nav-link text-white-50 small py-1" href="#emmet">Emmet</a>
                 <a class="nav-link text-white-50 small py-1" href="#css-minification">CSS Minification</a>
                 <a class="nav-link text-white-50 small py-1" href="#bookmark-scripts">Bookmark Scripts</a>
+                <a class="nav-link text-white-50 small py-1" href="#image-downloader">Image Downloader Tool</a>
                 <a class="nav-link text-white-50 small py-1" href="#accessibility-tools">Accessibility Tools</a>
               </div>
             </div>
@@ -121,6 +122,9 @@
               <a class="nav-link text-white-50 small py-1" href="#bookmark-scripts" data-bs-dismiss="offcanvas"
                 >Bookmark Scripts</a
               >
+              <a class="nav-link text-white-50 small py-1" href="#image-downloader" data-bs-dismiss="offcanvas"
+                >Image Downloader Tool</a
+              >
               <a class="nav-link text-white-50 small py-1" href="#accessibility-tools" data-bs-dismiss="offcanvas"
                 >Accessibility Tools</a
               >
@@ -161,29 +165,29 @@
         data-bs-smooth-scroll="true"
         tabindex="0">
         <!-- Overview Section -->
-        <section id="overview">
-          <h1>Content Migration Training</h1>
-          <p>
+        <section id="overview" class="py-4">
+          <h1 class="mb-4">Content Migration Training</h1>
+          <p class="mb-3">
             This guide provides comprehensive instructions for migrating content to the DealerOn platform. It covers
             different page types, best practices, and tools to ensure successful content migrations while maintaining
             brand compliance and accessibility standards.
           </p>
         </section>
         <!-- Page Types Section -->
-        <section id="page-types">
-          <h2>Page Types</h2>
-          <p>
+        <section id="page-types" class="py-4">
+          <h2 class="mb-4">Page Types</h2>
+          <p class="mb-3">
             DealerOn sites are made up of a combination of page types, including: platform, inventory, OEM pages, and
             custom content.
           </p>
-          <h3>Platform Pages</h3>
+          <h3 class="mb-3">Platform Pages</h3>
           <p>
             Platform pages are controlled by our DEV team and provide core dealership functionality. While most of these
             pages have fixed layouts, Design can make specific edits like adding custom content above or below the
             platform content, and in some cases modify the content within designated editable regions.
           </p>
-          <h4>Inventory Pages</h4>
-          <p>
+          <h4 class="mb-3">Inventory Pages</h4>
+          <p class="mb-3">
             Inventory pages are controlled by our DEV and Data teams. Design can make simple edits like tweaking CSS and
             adding content above and below the inventory feeds.
           </p>
@@ -197,8 +201,8 @@
             <li><code>/specs-</code> - Virtual Vehicle Details (URL continues with vehicle-specific information)</li>
             <li><code>/showroom.aspx</code> - Vehicle Showroom</li>
           </ul>
-          <h5>Examples of Inventory Pages</h5>
-          <ul>
+          <h5 class="mb-3">Examples of Inventory Pages</h5>
+          <ul class="mb-3">
             <li>
               Search Results Page (SRP) - New:
               <a href="https://cadillacdemo1.dealeron.com/searchnew.aspx" target="_blank"
@@ -220,8 +224,8 @@
               >
             </li>
           </ul>
-          <h4>Vehicle Research & Quotes</h4>
-          <ul>
+          <h5 class="mb-3">Examples of Inventory Pages</h5>
+          <ul class="mb-3">
             <li><code>/quote.aspx</code> - Quick Quote Request</li>
             <li><code>/trade.aspx</code> - Trade-In Appraisal</li>
             <li><code>/testdrive.aspx</code> - Schedule Test Drive (New Vehicles)</li>
@@ -347,6 +351,15 @@
             <i class="fas fa-info-circle"></i> <strong>Note:</strong> The majority of these replacement codes are
             populated from the information in Dealer Info in the CMS.
           </div>
+          <p>
+            For a comprehensive index of all available platform replacement codes, refer to the
+            <a
+              href="https://dealeron.my.salesforce.com/lightning/articles/Knowledge/Platform-Replacement-Codes"
+              target="_blank"
+              >Platform Replacement Codes Knowledge Article</a
+            >
+            (Salesforce login required).
+          </p>
           <h3>Dealer Information Codes</h3>
           <h4>Basic Information</h4>
           <ul>
@@ -355,6 +368,12 @@
               Appears as specified in Admin Tools > Admin Tools Page.<br />
               This is set in Dealer Info > General.
             </li>
+            <div class="alert alert-info mt-2">
+              <i class="fas fa-info-circle"></i> <strong>Note:</strong> Use <code>#NAME#</code> to replace shortened
+              versions of the dealership name (e.g., replacing 'Bobs' with 'Bobs Cadillac'). However, if the name is
+              significantly different or includes generic terms (e.g., 'Bob's Auto Service Shop'), it's better to
+              hardcode it rather than using the replacement code.
+            </div>
             <li>
               <code>#ADDRESS#</code> - Complete Address from Dealer Info > Address.<br />
               Appears as Street City, State ZIP
@@ -379,6 +398,16 @@
               <code>#DEALERMAKE#</code> - Displays the Primary Make as configured in Admin Tools Page > Admin Tools.<br />
               Displays only one make, even if multiple are entered in the Dealer Make(s) field.
             </li>
+            <li>
+              <code>%(MAKES)</code> - Dealership Makes.<br />
+              Displays a comma-separated list if the dealer sells multiple makes (e.g., Buick, GMC or Chevrolet, Buick,
+              GMC).
+            </li>
+            <div class="alert alert-info mt-2">
+              <i class="fas fa-info-circle"></i> <strong>Note:</strong> Avoid using <code>%(MAKES)</code> when the make
+              is part of a specific model name (e.g., "Chevrolet Silverado 1500"). Use it in isolated sentences or
+              contexts where just the make(s) are needed.
+            </div>
           </ul>
           <h4>Phone Numbers</h4>
           <p>These replacement codes output both the phone number and its corresponding label.</p>
@@ -979,6 +1008,33 @@
             Reviews should be populated by a script. If you're requested to build out a custom page with review content
             and no script has been provided, please push back and request one from the Project Coordinator.
           </p>
+          <h3 class="mt-4">Visual Examples</h3>
+          <div class="row mt-3">
+            <div class="col-md-6">
+              <figure>
+                <img
+                  src="Page Example.png"
+                  alt="Example page screenshot showing typical content sections like hero banner, text blocks, and CTAs."
+                  class="img-fluid border mb-2" />
+                <figcaption class="text-center small">
+                  Figure 1: Example of a standard page layout. Focus on migrating core content like text and essential
+                  images.
+                </figcaption>
+              </figure>
+            </div>
+            <div class="col-md-6">
+              <figure>
+                <img
+                  src="Page-example-marked up.png"
+                  alt="Same example page screenshot marked up to show elements typically not migrated, like specific header/footer styles, hardcoded specials, and complex background elements."
+                  class="img-fluid border mb-2" />
+                <figcaption class="text-center small">
+                  Figure 2: Example markup highlighting elements often *not* migrated directly (e.g., hardcoded
+                  specials, exact styling replication). Adapt content to the DealerOn platform structure.
+                </figcaption>
+              </figure>
+            </div>
+          </div>
         </section>
         <!-- FAQs and Special Situations Section -->
         <section id="faqs">
@@ -1523,6 +1579,20 @@
             <a href="https://dealeron.atlassian.net/wiki/spaces/DD/pages/2391752705/Bookmark+Scripts" target="_blank">
               DealerOn Bookmark Scripts Documentation </a
             >.
+          </p>
+        </section>
+        <section id="image-downloader">
+          <h3>Image Downloader Tool</h3>
+          <p>
+            An Image Downloader browser extension can be useful for extracting images from reference websites in their
+            original format and quality. This helps ensure you are using the best available assets for migration. One
+            popular option is
+            <a
+              href="https://chromewebstore.google.com/detail/image-downloader-imageye/agionbommeaifngbhincahgmoflcikhm?hl=en"
+              target="_blank"
+              >Image Downloader - Imageye</a
+            >
+            for Chrome. Search the extension store for your browser (Chrome, Firefox, etc.) for other available options.
           </p>
         </section>
 
